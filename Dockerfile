@@ -13,11 +13,6 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# ENV NEXT_TELEMETRY_DISABLED 1
-# ENV NEXT_PUBLIC_SUPABASE_URL=https://yqwlisclxkqlmlflspea.supabase.co
-# ENV NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlxd2xpc2NseGtxbG1sZmxzcGVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjAwNDQ5NDYsImV4cCI6MjAzNTYyMDk0Nn0.h2ZXy5ORoXTfczgE6X_PpBkTYWflJ2V6uToTqyFxVYw
-# ENV ANTHROPIC_API_KEY=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
-
 # Build the application
 RUN npm run build
 
